@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-swaggerui"
+dynamic = ["version"]
+dependencies = ["PyYAML"]
+requires-python = ">=3.8"
+
+[tool.setuptools.dynamic]
+version = { attr = "sphinx_swaggerui.__version__" }
+
+[tool.setuptools.package-data]
+sphinx_swaggerui = ['swagger-ui.html', 'static/*']
